@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-exec('pm2 start ~/monitoring-ore-mining/ecosystem.config.js', (error, _, stderr) => {
+exec('pm2 start ~/monitoring-ore-mining/ecosystem.config.js --time', (error, _, stderr) => {
     if (error) {
         console.log(JSON.stringify({
             status: false,
