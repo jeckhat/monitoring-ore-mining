@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
-const args2 = process.argv[1]; // stop or start
-const args3 = process.argv[2];
+const args2 = process.argv[2]; // stop or start
+const args3 = process.argv[3];
 
 exec(`pm2 ${args2} ${args3}`, (error, _, stderr) => {
     if (error) {
