@@ -21,7 +21,7 @@ exec(`pm2 ${args2} ${args3}`, (error, _, stderr) => {
         return;
     }
 
-    exec('node status.js', (error, stdout, stderr) => {
+    exec('node ~/monitoring-ore-mining/status.js', (error, stdout, stderr) => {
         if (error) {
             console.log(JSON.stringify({
                 status: false,

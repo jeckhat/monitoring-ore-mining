@@ -18,7 +18,7 @@ exec('pm2 start ~/monitoring-ore-mining/ecosystem.config.js --time', (error, _, 
         return;
     }
 
-    exec('node status.js', (error, stdout, stderr) => {
+    exec('node ~/monitoring-ore-mining/status.js', (error, stdout, stderr) => {
         if (error) {
             console.log(JSON.stringify({
                 status: false,

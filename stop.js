@@ -18,7 +18,7 @@ exec('pm2 stop all', (error, _, stderr) => {
         return;
     }
 
-    exec('node status.js', (error, stdout, stderr) => {
+    exec('node ~/monitoring-ore-mining/status.js', (error, stdout, stderr) => {
         if (error) {
             console.log(JSON.stringify({
                 status: false,
